@@ -1,0 +1,22 @@
+{
+  "name": "FileService",
+  "version": "1.0.0",
+  "description": "Application which allow image handling, storing and manipulating",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/render22/FileService.git"
+  },
+  "author": "Viktar Kantarovich <kotovviktor@yahoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/render22/FileService/issues"
+  },
+  "homepage": "https://github.com/render22/FileService",
+  "dependencies": {
+    "imagemagick": "^0.1.3"
+  }
+}
