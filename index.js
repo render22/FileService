@@ -1,21 +1,18 @@
 var im = require('imagemagick');
-im.identify('Desert.jpg', function(err, metadata){
+im.identify('Desert.jpg', function (err, metadata) {
 
 })
 
 
-
-
-
-var http=require('http'),
+var http = require('http'),
     fileSystem = require('fs'),
     path = require('path');
-http.createServer(function(req,response){
+http.createServer(function (req, response) {
     im.resize({
         srcPath: 'Desert.jpg',
         dstPath: 'Desert-small.jpg',
-        width:   256
-    }, function(err, stdout, stderr){
+        width: 256
+    }, function (err, stdout, stderr) {
         if (err) throw err;
         console.log('resized kittens.jpg to fit within 256x256px');
 
@@ -33,4 +30,4 @@ http.createServer(function(req,response){
         fileSystem.unlink(filePath);
     });
 
-}).listen(3000);
+}).listen(process.env.PORT || 3000);
