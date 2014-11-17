@@ -10,18 +10,18 @@ var http = require('http'),
 http.createServer(function (req, response) {
     im.resize({
         srcPath: 'Desert.jpg',
-        dstPath: 'Desert-small.jpg',
+
         width: 256
     }, function (err, stdout, stderr) {
         if (err) throw err;
         console.log('resized kittens.jpg to fit within 256x256px');
-
+        fileSystem.writeFileSync(path.join(__dirname, 'Desert-small.jpg'), stdout, 'binary');
         var filePath = path.join(__dirname, 'Desert-small.jpg');
         var stat = fileSystem.statSync(filePath);
 
         response.writeHead(200, {
             'Content-Type': 'image/jpeg',
-            'Content-Length': stat.size
+            'Content-Length': stdout.length
         });
 
         var readStream = fileSystem.createReadStream(filePath);
