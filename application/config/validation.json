@@ -1,0 +1,5 @@
+{
+    "allowedMimes":["image/jpeg"],
+
+    "destinationDir":"/tmp/"
+}

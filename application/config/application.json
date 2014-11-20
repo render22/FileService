@@ -1,0 +1,25 @@
+{
+    "server":{
+      "port":3000
+    },
+    "credentials": {
+        "tokenLife": 3600,
+        "cookieSecret": "3Gdk8j54KUT21",
+        "db": {
+            "pg": {
+                "local": {
+                    "connectionLink": "postgres://postgres:root@localhost:5432/Files"
+                },
+                "remote": {
+                    "connectionLink": "postgres://fiiaggrxcnmxgg:OAw3xgvIJYAjfmTkZtjMzcGhEh@ec2-54-83-201-54.compute-1.amazonaws.com/dc1l32h3rqfhe7"
+                },
+
+                "unit-tests":{
+                    "connectionLink": "postgres://postgres:root@localhost:5432/TestImport"
+                }
+
+
+            }
+        }
+    }
+}
