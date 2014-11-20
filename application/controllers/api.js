@@ -25,8 +25,8 @@ module.exports = {
            --- npm install aws-sdk
            --- npm install imagemagick
          Then set following environment variables
-          SET aws_access_key_id=AKIAJKI6HZNPA4GI3L4A
-          SET aws_secret_access_key=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
+          SET aws_access_key_id=<key>
+          SET aws_secret_access_key=<secret key>
           */
         /*
          Несмотря на то что методы чейнятся в цепочку, внутри они резолвятся с помощью промисов, все выполняется асинхронно.
